@@ -1,0 +1,159 @@
+.header {
+	background: url("../img/header-bg.jpg") no-repeat fixed center / cover;
+	padding: 55px 0 99px 0;
+	color: $white-color;
+
+	@media all and (max-width: 580px) {
+		padding: 40px 0 30px 0;
+	}
+
+	a {
+		color: $white-color;
+	}
+}
+
+.line-logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 270px;
+
+	@media all and (max-width: 768px) {
+		margin-bottom: 180px;
+	}
+
+	@media all and (max-width: 580px) {
+		justify-content: center;
+		margin-bottom: 140px;
+	}
+
+	a {
+		@include font-size(28);
+		font-weight: bold;
+	}
+
+	p {
+		text-transform: uppercase;
+		@include font-size(14);
+		font-weight: 300;
+
+		@media all and (max-width: 580px) {
+			display: none;
+		}
+	}
+}
+
+.line-headline {
+	margin-bottom: 30px;
+
+	@media all and (max-width: 768px) {
+		max-width: 550px;
+		@include auto;
+		margin-bottom: 180px;
+	}
+
+	@media all and (max-width: 580px) {
+		max-width: 300px;
+		margin-bottom: 110px;
+	}
+	
+	h1 {
+		@include font-size(90);
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		position: relative;
+		line-height: 1.1;
+
+		@media all and (max-width: 768px) {
+			@include font-size(64);
+		}
+
+		@media all and (max-width: 580px) {
+			@include font-size(32);
+		}
+		
+		&::before {
+			@include pseudo;
+			width: 5px;
+			height:	400px;
+			top: -58%;
+			left: 34%;
+			background-color: $bg-dark-violet-color;
+			transform: rotate(38deg);
+			z-index: 10;
+
+			@media all and (max-width: 1099px) {
+				left: 45%;
+				top: -40%;
+				z-index: -1;
+			}
+
+			@media all and (max-width: 580px) {
+				height:	200px;
+			}
+		}
+	}
+
+	span {
+		display: block;
+
+		&:first-child {
+			position: relative;
+			z-index: 100;
+		}
+
+		&:last-child {
+			text-align: right;
+
+			@media all and (max-width: 768px) {
+				text-align: left;
+				padding-left: 8%;
+			}
+
+			@media all and (max-width: 500px) {
+				margin-top: 10px;
+			}
+
+			@media all and (max-width: 327px) {
+				padding-left: 5%;
+			}
+		}
+	}
+}
+
+.btn-line {
+	text-align: center;
+
+	@media all and (max-width: 480px) {
+		order: 1;
+		margin-bottom: 40px;
+	}
+
+	i {
+		position: absolute;
+		left: 40px;
+
+		@media all and (max-width: 768px) {
+			left: 15px;
+		}
+	}
+
+	.fa-apple {
+		@include font-size(42);
+		top: 15px;
+
+		@media all and (max-width: 490px) {
+			@include font-size(22);
+			top: 7px;
+		}
+	}
+
+	.fa-google-play {
+		@include font-size(37);
+
+		@media all and (max-width: 490px) {
+			@include font-size(20);
+		
+		}
+	}
+}

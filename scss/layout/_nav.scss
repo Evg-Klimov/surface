@@ -1,0 +1,101 @@
+.navigation {
+	margin-bottom: 170px;
+
+	@media all and (max-width: 768px) {
+		margin-bottom: 100px;
+	}
+
+	@media all and (max-width: 480px) {
+		order: 2;
+		margin-bottom: 0;
+	}
+	
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-left: auto;
+		max-width: 567px;
+		width: 100%;
+
+		@media all and (max-width: 768px) {
+			@include auto;	
+		}
+	}
+
+	a {
+		color: $menu-link-color;
+		position: relative;
+		padding: 8px;
+
+		&:hover .border-top,
+		&:hover .border-bottom,
+		&:hover .border-right,
+		&:hover .border-left {
+			transition: all .1s linear;
+		}
+		
+		&:hover .border-top,
+		&:hover .border-bottom {
+			width: 100%;
+		}
+
+		&:hover .border-right,
+		&:hover .border-left {
+			height: 100%;
+		}
+
+		&:hover .border-right {
+			transition-delay: .1s;
+		}
+
+		&:hover .border-bottom {
+			transition-delay: .2s;
+		}
+
+		&:hover .border-left {
+			transition-delay: .3s;
+		}
+	}
+
+	.border {
+		position: absolute;
+		background-color: $bg-dark-violet-color;
+		transition: .1s linear;
+
+		&-top,
+		&-bottom {
+			width: 0%;
+			height: 2px;
+		}
+
+		&-left,
+		&-right {
+			width: 2px;
+			height: 0%;
+		}
+
+		&-top {	
+			left: 0;
+			top: 0;		
+			transition-delay: .3s;
+		}
+
+		&-right {
+			right: 0;
+			top: 0;
+			transition-delay: .2s;
+		}
+
+		&-bottom {
+			right: 0;
+			bottom: 0;		
+			transition-delay: .1s;
+		}
+
+		&-left {
+			left: 0;
+			bottom: 0;
+		}
+	}
+}

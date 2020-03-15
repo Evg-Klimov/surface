@@ -1,0 +1,25 @@
+@import "app/scss/helpers/mixin";
+
+@include font-face(
+  "proximanova-ex",
+  "../fonts/proximanova/regular/proximanova-regular-webfont",
+  400
+);
+
+@include font-face(
+  "proximanova-ex",
+  "../fonts/proximanova/light/proximanova-light-webfont",
+  300
+);
+
+@include font-face(
+  "proximanova-ex",
+	"../fonts/proximanova/bold/proximanova-bold-webfont",
+	bold
+);
+
+@include font-face(
+  "proximanova-ex",
+  "../fonts/proximanova/semibold/proximanova-semibold-webfont",
+  600
+);

@@ -1,0 +1,202 @@
+.about {
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+
+		@media all and (max-width: 768px) {
+			margin-bottom: 110px;
+		}
+
+		@media all and (max-width: 430px) {
+			margin-bottom: 50px;
+		}
+
+		&--reverse {
+			flex-direction: row-reverse;
+
+			@media all and (max-width: 768px) {
+				flex-direction: initial;
+			}
+		}
+	}
+
+	&__block-image {
+		width: 50%;
+		height: 730px;
+	
+		&--active {
+			background: url("../img/shutterstock.jpg") no-repeat center/cover;
+		}
+
+		&--contact {
+			background: url("../img/bigstock-football-players-and-coach.jpg") no-repeat center/cover;
+		}
+
+		&--work {
+			background: url("../img/bigstock-football-players.jpg") no-repeat center/cover;
+		}
+
+		@media all and (max-width: 1200px) {
+			height: 630px;
+		}
+
+		@media all and (max-width: 930px) {
+			height: 530px;
+		}
+
+		@media all and (max-width: 768px) {
+			width: 100%;
+		}
+
+		@media all and (max-width: 430px) {
+			height: 350px;
+		}
+	}
+
+	&__block-info {
+		padding: 250px 7px 0 100px;
+		width: 50%;
+
+		@media all and (max-width: 1200px) {
+			padding-top: 200px;
+			padding-left: 7px;
+		}
+
+		@media all and (max-width: 930px) {
+			padding-top: 150px;
+		}
+
+		@media all and (max-width: 768px) {
+			width: 100%;
+			padding-top: 70px;
+		}
+
+		@media all and (max-width: 430px) {
+			padding-top: 50px;
+		}
+	}
+
+	&__text {
+		@include font-size(24);
+		max-width: 320px;
+		position: relative;
+		hyphens: auto;
+
+		&--contact-max-width {
+			max-width: 370px;
+		}
+
+		&--work-max-width {
+			max-width: 500px;
+		}
+
+		@media all and (max-width: 1200px) {
+			max-width: 100%;
+		}
+
+		@media all and (max-width: 430px) {
+			@include font-size(16);
+		}
+
+		&::before {
+			@include pseudo;
+			border-radius: 2px;
+			background-color: $bg-dark-violet-color;
+			width: 22px;
+			height: 5px;
+			bottom: -90px;
+
+			@media all and (max-width: 930px) {
+				bottom: -70px;
+			}
+
+			@media all and (max-width: 768px) {
+				bottom: -30px;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 110px;
+
+		@media all and (max-width: 930px) {
+			margin-bottom: 70px;
+			@include font-size(65);
+		}
+
+		@media all and (max-width: 768px) {
+			margin-bottom: 30px;
+		}
+
+		@media all and (max-width: 430px) {
+			@include font-size(28);
+		}
+	}
+
+	&__numbering {
+		position: absolute;
+		left: 50%;
+		top: 225px;
+		transform: translateX(-50%);
+		background-color: $bg-dark-violet-color;
+		width: 168px;
+		height: 155px;
+		text-align: center;
+
+		@media all and (max-width: 1200px) {
+			top: 50px;
+		}
+
+		@media all and (max-width: 930px) {
+			width: 116px;
+			height: 116px;
+			top: 20px;
+		}
+
+		@media all and (max-width: 768px) {
+			left: 30px;
+    	transform: none;
+    	top: 440px;
+		}
+		
+		@media all and (max-width: 430px) {
+			width: 70px;
+			height: 70px;
+			left: 15px;
+    	top: 300px;
+		}
+	}
+
+	&__number {
+		@include font-size(24);
+		font-weight: bold;
+		line-height: 155px;
+		color: $white-color;
+		letter-spacing: 2px;
+		position: relative;
+
+		@media all and (max-width: 930px) {
+			line-height: 116px;
+		}
+
+		@media all and (max-width: 430px) {
+			@include font-size(14);
+			line-height: 70px;
+		}
+
+		&::before {
+			@include pseudo;
+			bottom: -3px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			height: 5px;
+			border-radius: 2px;
+			background-color: rgba($color: $white-color, $alpha: .302);
+		}
+	}
+}
+
+
